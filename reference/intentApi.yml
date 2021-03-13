@@ -1,0 +1,76 @@
+openapi: 3.0.0
+info:
+  title: ultimate.ai Intents API
+  description: ultimate.ai Intents API
+  version: 1.0.0
+servers:
+  - url: 'https://chat.ultimate.ai/api'
+paths:
+  /intents:
+    post:
+      summary: Get intents with a visitor message
+      tags:
+        - Intents
+      security:
+        - ApiKeyAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                botId:
+                  $ref: '#/components/schemas/MongoObjectId'
+                message:
+                  type: string
+                  example: Hello this is a chat message
+                conversationId:
+                  type: string
+                  example: '1234567890'
+                  description: Can be any unique string that is used for all messages of a conversation
+              required:
+                - botId
+                - message
+                - conversationId
+      responses:
+        '200': # status code
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  intents:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        confidence:
+                          type: number
+                          example: 0.7
+                        name:
+                          type: string
+                          example: Intent name
+                  entities:
+                    type: array
+                    items:
+                      type: object
+        '400': # status code
+          description: Bad Request
+        '401': # status code
+          description: Unauthorized
+        '500': # status code
+          description: Internal Server Error
+
+components:
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: authorization
+  schemas:
+    MongoObjectId:
+      type: string
+      pattern: '/^[a-f\d]{24}$/i'
+      example: 5f74865056d7bb000fcd39ff

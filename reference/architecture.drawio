@@ -1,0 +1,94 @@
+<mxfile>
+    <diagram id="gO5MKqW-kUTWFiQlG6-k" name="Page-1">
+        <mxGraphModel dx="708" dy="656" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="QPh11TYST23DDqU0Wl_V-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=0;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.25;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="QPh11TYST23DDqU0Wl_V-1" target="QPh11TYST23DDqU0Wl_V-3" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="QPh11TYST23DDqU0Wl_V-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="QPh11TYST23DDqU0Wl_V-1" target="QPh11TYST23DDqU0Wl_V-2" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="QPh11TYST23DDqU0Wl_V-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="QPh11TYST23DDqU0Wl_V-1" target="QPh11TYST23DDqU0Wl_V-17" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <object placeholders="1" c4Name="Server 1" c4Type="Software System" c4Description="Server the communicates with ultimate API" label="&lt;b&gt;%c4Name%&lt;/b&gt;&lt;div&gt;[%c4Type%]&lt;/div&gt;&lt;br&gt;&lt;div&gt;%c4Description%&lt;/div&gt;" id="QPh11TYST23DDqU0Wl_V-1">
+                    <mxCell style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#1168BD;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#1168BD;metaEdit=1;metaData={&quot;c4Type&quot;:{&quot;editable&quot;:false}};points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" parent="1" vertex="1">
+                        <mxGeometry x="130" y="280" width="160" height="110.00000000000001" as="geometry"/>
+                    </mxCell>
+                </object>
+                <mxCell id="QPh11TYST23DDqU0Wl_V-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="QPh11TYST23DDqU0Wl_V-2" target="QPh11TYST23DDqU0Wl_V-11" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="QPh11TYST23DDqU0Wl_V-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="QPh11TYST23DDqU0Wl_V-2" target="QPh11TYST23DDqU0Wl_V-1" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <object placeholders="1" c4Name="Server 2" c4Type="Software System" c4Description="Server that handles datastorage" label="&lt;b&gt;%c4Name%&lt;/b&gt;&lt;div&gt;[%c4Type%]&lt;/div&gt;&lt;br&gt;&lt;div&gt;%c4Description%&lt;/div&gt;" id="QPh11TYST23DDqU0Wl_V-2">
+                    <mxCell style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#1168BD;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#1168BD;metaEdit=1;metaData={&quot;c4Type&quot;:{&quot;editable&quot;:false}};points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" parent="1" vertex="1">
+                        <mxGeometry x="480" y="280" width="160" height="110.00000000000001" as="geometry"/>
+                    </mxCell>
+                </object>
+                <mxCell id="QPh11TYST23DDqU0Wl_V-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="QPh11TYST23DDqU0Wl_V-3" target="QPh11TYST23DDqU0Wl_V-1" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <object placeholders="1" c4Name="ultumate server" c4Type="Software System" c4Description="Ultumate.ia AI API" label="&lt;b&gt;%c4Name%&lt;/b&gt;&lt;div&gt;[%c4Type%]&lt;/div&gt;&lt;br&gt;&lt;div&gt;%c4Description%&lt;/div&gt;" id="QPh11TYST23DDqU0Wl_V-3">
+                    <mxCell style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#999999;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#8A8A8A;metaEdit=1;metaData={&quot;c4Type&quot;:{&quot;editable&quot;:false}};points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" parent="1" vertex="1">
+                        <mxGeometry x="130" y="70" width="160" height="110.00000000000001" as="geometry"/>
+                    </mxCell>
+                </object>
+                <mxCell id="QPh11TYST23DDqU0Wl_V-5" value="API Key + message" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" parent="1" vertex="1">
+                    <mxGeometry x="80" y="220" width="120" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="QPh11TYST23DDqU0Wl_V-7" value="List of Intents" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" parent="1" vertex="1">
+                    <mxGeometry x="250" y="220" width="90" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="QPh11TYST23DDqU0Wl_V-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="QPh11TYST23DDqU0Wl_V-8" target="QPh11TYST23DDqU0Wl_V-2" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="QPh11TYST23DDqU0Wl_V-26" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="QPh11TYST23DDqU0Wl_V-8" target="QPh11TYST23DDqU0Wl_V-2" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <object placeholders="1" c4Name="Software Engineer" c4Type="Person" c4Description="Engineer with CRUD permissions" label="&lt;b&gt;%c4Name%&lt;/b&gt;&lt;div&gt;[%c4Type%]&lt;/div&gt;&lt;br&gt;&lt;div&gt;%c4Description%&lt;/div&gt;" id="QPh11TYST23DDqU0Wl_V-8">
+                    <mxCell style="html=1;dashed=0;whitespace=wrap;fillColor=#08427b;strokeColor=none;fontColor=#ffffff;shape=mxgraph.c4.person;align=center;metaEdit=1;points=[[0.5,0,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0]];metaData={&quot;c4Type&quot;:{&quot;editable&quot;:false}};" parent="1" vertex="1">
+                        <mxGeometry x="480" y="40" width="160" height="140" as="geometry"/>
+                    </mxCell>
+                </object>
+                <mxCell id="QPh11TYST23DDqU0Wl_V-10" value="DELETE Request to delete&lt;br&gt;&amp;nbsp;reply from database&lt;br&gt;[REST]" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" parent="1" vertex="1">
+                    <mxGeometry x="585" y="205" width="160" height="50" as="geometry"/>
+                </mxCell>
+                <object placeholders="1" c4Type="Database" c4Technology="MongoDB (Mongoose)" c4Description="Database that stores replies" label="%c4Type%&lt;div&gt;[Container:&amp;nbsp;%c4Technology%]&lt;/div&gt;&lt;br&gt;&lt;div&gt;%c4Description%&lt;/div&gt;" id="QPh11TYST23DDqU0Wl_V-11">
+                    <mxCell style="shape=cylinder;whiteSpace=wrap;html=1;boundedLbl=1;rounded=0;labelBackgroundColor=none;fillColor=#438DD5;fontSize=12;fontColor=#ffffff;align=center;strokeColor=#3C7FC0;metaEdit=1;points=[[0.5,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.5,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];metaData={&quot;c4Type&quot;:{&quot;editable&quot;:false}};" parent="1" vertex="1">
+                        <mxGeometry x="480" y="470" width="160" height="140" as="geometry"/>
+                    </mxCell>
+                </object>
+                <mxCell id="QPh11TYST23DDqU0Wl_V-14" value="GET Requests with best intent from&amp;nbsp;&lt;br&gt;[REST]" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" parent="1" vertex="1">
+                    <mxGeometry x="275" y="280" width="210" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="QPh11TYST23DDqU0Wl_V-16" value="POST request with message&lt;br&gt;[REST]" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" parent="1" vertex="1">
+                    <mxGeometry y="430" width="170" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="QPh11TYST23DDqU0Wl_V-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="QPh11TYST23DDqU0Wl_V-17" target="QPh11TYST23DDqU0Wl_V-1" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <object placeholders="1" c4Name="User" c4Type="Person" c4Description="User using the chatbot" label="&lt;b&gt;%c4Name%&lt;/b&gt;&lt;div&gt;[%c4Type%]&lt;/div&gt;&lt;br&gt;&lt;div&gt;%c4Description%&lt;/div&gt;" id="QPh11TYST23DDqU0Wl_V-17">
+                    <mxCell style="html=1;dashed=0;whitespace=wrap;fillColor=#08427b;strokeColor=none;fontColor=#ffffff;shape=mxgraph.c4.person;align=center;metaEdit=1;points=[[0.5,0,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0]];metaData={&quot;c4Type&quot;:{&quot;editable&quot;:false}};" parent="1" vertex="1">
+                        <mxGeometry x="130" y="480" width="160" height="140" as="geometry"/>
+                    </mxCell>
+                </object>
+                <mxCell id="QPh11TYST23DDqU0Wl_V-19" value="POST response with reply&lt;br&gt;[REST]" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" parent="1" vertex="1">
+                    <mxGeometry x="210" y="430" width="150" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="QPh11TYST23DDqU0Wl_V-21" value="GET Response with reply to&amp;nbsp;&lt;br&gt;[REST]" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" parent="1" vertex="1">
+                    <mxGeometry x="305" y="340" width="170" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="QPh11TYST23DDqU0Wl_V-24" value="Calls database to get reply" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" parent="1" vertex="1">
+                    <mxGeometry x="490" y="420" width="160" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="QPh11TYST23DDqU0Wl_V-25" value="POST Request to create &lt;br&gt;reply in database&lt;br&gt;[REST]" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" parent="1" vertex="1">
+                    <mxGeometry x="390" y="205" width="150" height="50" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
