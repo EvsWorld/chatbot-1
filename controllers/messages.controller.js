@@ -1,7 +1,7 @@
 import api from '../utils/axiosConfig';
 import { getIntents } from '../services/getIntents';
 import { config } from '../config';
-import { getReply } from '../services/getReply';
+import { respondFromReplies } from '../services/getReply';
 /**
  * returns reply to client
  */
@@ -19,7 +19,7 @@ export const handleReply = async (req, res) => {
   try {
     const intents = await getIntents(userMessage);
 
-    const reply = await getReply(intents, clientParameters);
+    const reply = await respondFromReplies(intents, clientParameters);
     res.status(200).send(reply);
   } catch (err) {
     console.error(err);
