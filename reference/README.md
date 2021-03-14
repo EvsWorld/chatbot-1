@@ -12,12 +12,12 @@
 - [x] make server 1 call server2 and find reply by intent
 - [ ]  make server 1 call server2 and find reply by intent and botId
 	- [ ] make multiple responses for each botId (company in my db)
-- [ ] implement function to seed s2 replies db, run from script
-- [ ] standardize endpoint nouns
+- [x] implement function to seed s2 replies db, run from script
+- [x] standardize endpoint nouns
 - [ ] further separate services out from controllers
 - [ ] implement jsonschema and/or ajv
-- [ ] implement create route for s2
-- [ ]  implement delete route for s2
+- [x] implement create route for s2
+- [x]  implement delete route for s2
 - [ ]  do jsdocs
 - [ ] implement token middleware to protect crud routes for s2
 - [ ] implement tests

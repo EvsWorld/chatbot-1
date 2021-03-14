@@ -13,12 +13,10 @@ export const respondFromReplies = async (intents, params) => {
   );
   console.log('topIntent :>> ', topIntent);
   if (topIntent) {
-    // TODO: call messages service to get message to return
+    // call messages service to get message to return
     // return apropriate message to client
     const topIntentAndParams = { ...params, intent: topIntent.name };
-    console.log('topIntentAndParams :>> ', topIntentAndParams);
     const reply = await getReplyFromExternal(topIntentAndParams);
-    console.log('reply :>> ', reply);
     if (reply) {
       return {
         meta: `Understood intent (${topIntent.name}) and found reply in s2 db`,
@@ -43,12 +41,9 @@ export const respondFromReplies = async (intents, params) => {
 export const getReplyFromExternal = async (params) => {
   const { botId, conversationId, intent } = params;
   try {
-    const result = await axios.get(
-      `${config.serverTwoUrl}/api/replies/oneReply`,
-      {
-        params,
-      }
-    );
+    const result = await axios.get(`${config.serverTwoUrl}/api/replies/`, {
+      params,
+    });
     return result.data;
   } catch (error) {
     console.error(error);

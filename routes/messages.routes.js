@@ -3,6 +3,6 @@ import * as messagesContoller from '../controllers/messages.controller';
 
 const router = Router();
 
-router.post('/reply', messagesContoller.handleReply);
+router.post('/chat-reply', messagesContoller.handleReply);
 
 export default router;
