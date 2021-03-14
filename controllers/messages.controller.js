@@ -2,12 +2,12 @@ import api from '../utils/axiosConfig';
 import { getIntents } from '../services/intents.service';
 import { config } from '../config';
 import { respondFromReplies } from '../services/replies.service';
+
 /**
  * returns reply to client
  */
 export const handleReply = async (req, res) => {
-  // TODO: call messages service
-  const { botId, message, conversationId } = req.query;
+  const { botId, message, conversationId } = req.body;
 
   const clientParameters = { botId, conversationId };
   const userMessage = {
