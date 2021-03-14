@@ -1,6 +1,6 @@
 <mxfile>
     <diagram id="gO5MKqW-kUTWFiQlG6-k" name="Page-1">
-        <mxGraphModel dx="708" dy="656" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="873" dy="656" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -13,7 +13,7 @@
                 <mxCell id="QPh11TYST23DDqU0Wl_V-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="QPh11TYST23DDqU0Wl_V-1" target="QPh11TYST23DDqU0Wl_V-17" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <object placeholders="1" c4Name="Server 1" c4Type="Software System" c4Description="Server the communicates with ultimate API" label="&lt;b&gt;%c4Name%&lt;/b&gt;&lt;div&gt;[%c4Type%]&lt;/div&gt;&lt;br&gt;&lt;div&gt;%c4Description%&lt;/div&gt;" id="QPh11TYST23DDqU0Wl_V-1">
+                <object placeholders="1" c4Name="Server 1" c4Type="Software System" c4Description="Server the communicates with AI API" label="&lt;b&gt;%c4Name%&lt;/b&gt;&lt;div&gt;[%c4Type%]&lt;/div&gt;&lt;br&gt;&lt;div&gt;%c4Description%&lt;/div&gt;" id="QPh11TYST23DDqU0Wl_V-1">
                     <mxCell style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#1168BD;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#1168BD;metaEdit=1;metaData={&quot;c4Type&quot;:{&quot;editable&quot;:false}};points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" parent="1" vertex="1">
                         <mxGeometry x="130" y="280" width="160" height="110.00000000000001" as="geometry"/>
                     </mxCell>
@@ -32,7 +32,7 @@
                 <mxCell id="QPh11TYST23DDqU0Wl_V-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="QPh11TYST23DDqU0Wl_V-3" target="QPh11TYST23DDqU0Wl_V-1" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <object placeholders="1" c4Name="ultumate server" c4Type="Software System" c4Description="Ultumate.ia AI API" label="&lt;b&gt;%c4Name%&lt;/b&gt;&lt;div&gt;[%c4Type%]&lt;/div&gt;&lt;br&gt;&lt;div&gt;%c4Description%&lt;/div&gt;" id="QPh11TYST23DDqU0Wl_V-3">
+                <object placeholders="1" c4Name="AI server" c4Type="Software System" c4Description="External AI API" label="&lt;b&gt;%c4Name%&lt;/b&gt;&lt;div&gt;[%c4Type%]&lt;/div&gt;&lt;br&gt;&lt;div&gt;%c4Description%&lt;/div&gt;" id="QPh11TYST23DDqU0Wl_V-3">
                     <mxCell style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#999999;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#8A8A8A;metaEdit=1;metaData={&quot;c4Type&quot;:{&quot;editable&quot;:false}};points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" parent="1" vertex="1">
                         <mxGeometry x="130" y="70" width="160" height="110.00000000000001" as="geometry"/>
                     </mxCell>
