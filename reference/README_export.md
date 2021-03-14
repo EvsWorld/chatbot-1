@@ -9,9 +9,10 @@
 - [x] set up dev env
 - [x] connect s2 with db
 - [x] make s1 call ai api and get intents
-- [ ] make server 1 call server2 and find reply by intent
+- [x] make server 1 call server2 and find reply by intent
 - [ ]  make server 1 call server2 and find reply by intent and botId
 	- [ ] make multiple responses for each botId (company in my db)
+- [ ] implement function to seed s2 replies db, run from script
 - [ ] standardize endpoint nouns
 - [ ] further separate services out from controllers
 - [ ] implement jsonschema and/or ajv

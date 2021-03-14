@@ -4,7 +4,7 @@ export const config = {
   intentsUrl: process.env.INTENTS_API_URL,
   serverOneUrl: process.env.SERVER_ONE_URL,
   serverTwoUrl: process.env.SERVER_TWO_URL,
-  confidenceThreshold: 0.8,
+  confidenceThreshold: 0.6,
   noConfidenceReply:
     "I'm sorry, I'm not sure how to proceed, tranfering you to a customer service specialist now.",
 };

@@ -1,7 +1,7 @@
 import api from '../utils/axiosConfig';
-import { getIntents } from '../services/getIntents';
+import { getIntents } from '../services/intents.service';
 import { config } from '../config';
-import { respondFromReplies } from '../services/getReply';
+import { respondFromReplies } from '../services/replies.service';
 /**
  * returns reply to client
  */
