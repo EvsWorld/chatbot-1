@@ -2,7 +2,7 @@
 2 servers chatbot challenge
 
 
-![](architecture.png)
+![](reference/architecture.png)
 
 
 ## TODO:

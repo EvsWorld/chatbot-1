@@ -1,6 +1,5 @@
 node_modules
 .env
 reference/architecture.drawio
-reference/architecture.png
 reference/intentApi.yml
 reference/reqs.rtf
