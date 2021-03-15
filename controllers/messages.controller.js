@@ -20,9 +20,17 @@ export const handleReply = async (req, res) => {
     const intents = await getIntents(userMessage);
 
     const reply = await respondFromReplies(intents, clientParameters);
-    res.status(200).send(reply);
+    console.log('respondFromReplies :>> ', reply);
+    res.status(reply.status).send({
+      status: reply.status,
+      meta: reply.meta,
+      data: reply.data,
+    });
   } catch (err) {
     console.error(err);
-    res.status(500).send(err);
+    res.status(500).send({
+      status: 500,
+      meta: 'Internal error',
+    });
   }
 };
