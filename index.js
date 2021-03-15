@@ -6,7 +6,7 @@ import { config } from './config';
 
 import routes from './routes';
 
-const app = express();
+export const app = express();
 
 app.use(bodyParser.json());
 app.use(bodyParser.json({ extended: true }));
