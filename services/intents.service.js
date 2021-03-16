@@ -8,10 +8,7 @@ import api from '../utils/axiosConfig';
  * @param {string} userMessage.message - message from client
  */
 export const getIntents = async (userMessage) => {
-  try {
-    const response = await api.post('/intents', userMessage);
-    return await response.data;
-  } catch (err) {
-    console.error(err);
-  }
+  const response = await api.post('/intents', userMessage);
+  // console.log('getIntents response :>> ', response.data);
+  return await response.data;
 };

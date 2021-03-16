@@ -8,7 +8,7 @@ const router = Router();
 router.post(
   '/chat-reply',
   schemaValidator(schema),
-  messagesContoller.handleReply
+  messagesContoller.handleMessage
 );
 
 export default router;

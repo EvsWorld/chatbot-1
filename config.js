@@ -6,5 +6,5 @@ export const config = {
   serverTwoUrl: process.env.SERVER_TWO_URL,
   confidenceThreshold: 0.6,
   needHumanMessage:
-    "I'm sorry, I'm not sure how to proceed, tranfering you to a customer service specialist now.",
+    "I'm sorry, I'm not sure how to proceed, transfering you to a customer service specialist now.",
 };

@@ -7,7 +7,7 @@
   "properties": {
     "botId": {
       "type": "string",
-      "pattern": "^(?=[a-f\\d]{24}$)(\\d+[a-f]|[a-f]+\\d)",
+      "pattern": "^(?=[a-fA-F\\d]{24}$)(\\d+[a-fA-F]|[a-fA-F]+\\d)",
       "examples": ["5f74865056d7bb000fcd39ff"]
     },
     "conversationId": {
@@ -17,6 +17,7 @@
     },
     "message": {
       "type": "string",
+      "pattern": "^(?!\\s*$).+",
       "examples": ["Hello this is a chat message"]
     }
   },

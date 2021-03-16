@@ -2,12 +2,13 @@ import 'dotenv/config';
 import express from 'express';
 import bodyParser from 'body-parser';
 import morgan from 'morgan';
+import cors from 'cors';
 import { config } from './config';
 
 import routes from './routes';
 
 export const app = express();
-
+app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.json({ extended: true }));
 

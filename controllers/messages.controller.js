@@ -6,7 +6,7 @@ import { respondFromReplies } from '../services/replies.service';
 /**
  * returns reply to client
  */
-export const handleReply = async (req, res) => {
+export const handleMessage = async (req, res) => {
   const { botId, message, conversationId } = req.body;
 
   const clientParameters = { botId, conversationId };
@@ -18,19 +18,19 @@ export const handleReply = async (req, res) => {
 
   try {
     const intents = await getIntents(userMessage);
-
     const reply = await respondFromReplies(intents, clientParameters);
-    console.log('respondFromReplies :>> ', reply);
+    // console.log('respondFromReplies :>> ', reply);
     res.status(reply.status).send({
       status: reply.status,
       meta: reply.meta,
       data: reply.data,
     });
   } catch (err) {
-    console.error(err);
+    // console.error('handleMessage error :>> ', err.response.data);
     res.status(500).send({
-      status: 500,
-      meta: 'Internal error',
+      status: statusCode,
+      meta: "Internal error. See details in 'data' ",
+      data: err.message,
     });
   }
 };

@@ -13,32 +13,31 @@ export const respondFromReplies = async (intents, params) => {
     intents.intents.find(
       (intent) => intent.confidence > config.confidenceThreshold
     );
-  console.log('topIntent :>> ', topIntent);
+  // console.log('topIntent :>> ', topIntent);
   if (topIntent) {
     // call messages service to get message to return
     // return apropriate message to client
     const topIntentAndParams = { ...params, intent: topIntent.name };
-    const reply = await getReplyFromExternal(topIntentAndParams);
-    if (!reply) {
-      return {
-        status: 500,
-        meta: `Unknown error orginating from server 2`,
-      };
-    }
-    console.log('getReplyFromExternal :>> ', reply);
-
-    if (reply.status === 200) {
-      return {
-        status: reply.data.status,
-        meta: `Understood intent (${topIntent.name}) and found reply in s2 db`,
-        data: { finalReply: reply.data.data },
-      };
-    } else if (reply.status === 404) {
-      return {
-        status: reply.status,
-        meta: `Understood intent (${topIntent.name}) but could NOT find a reply in s2 db`,
-        data: { finalReply: config.needHumanMessage },
-      };
+    try {
+      const reply = await getReplyFromExternal(topIntentAndParams);
+      if (reply.status === 200) {
+        const replyData = reply.data.data;
+        return {
+          status: reply.data.status,
+          meta: `Understood intent (${topIntent.name}) and found reply in s2 db`,
+          data: {
+            finalReply: replyData.replyMessage,
+            intent: replyData.intent,
+          },
+        };
+      }
+    } catch (err) {
+      if (err.response.data.status == 404)
+        return {
+          status: 404,
+          meta: `Understood intent but could NOT find a reply in s2 db`,
+          data: { finalReply: config.needHumanMessage, intent: topIntent.name },
+        };
     }
   } else {
     // if non of the messages have a high enough percentage then just return
@@ -46,26 +45,16 @@ export const respondFromReplies = async (intents, params) => {
     return {
       status: 200,
       meta: "Wasn't confident enough in users intent ",
-      data: { data: config.needHumanMessage },
+      data: { finalReply: config.needHumanMessage },
     };
   }
 };
 
 export const getReplyFromExternal = async (params) => {
   const { botId, conversationId, intent } = params;
-  try {
-    const result = await axios.get(`${config.serverTwoUrl}/api/replies/`, {
-      params,
-    });
-    console.log('getReplyFromExternal :>> ', result);
-    return result;
-  } catch (err) {
-    console.error('getReplyFromExternal error :>>, ', err);
-
-    return {
-      status: err.response.status || 500,
-      meta: 'Could not get reply from server 2.',
-      error: err.message || 'Error getting reply from server 2',
-    };
-  }
+  const result = await axios.get(`${config.serverTwoUrl}/api/replies/`, {
+    params,
+  });
+  console.log('getReplyFromExternal :>> ', result);
+  return result;
 };
