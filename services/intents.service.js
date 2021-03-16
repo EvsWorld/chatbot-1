@@ -1,4 +1,5 @@
 import api from '../utils/axiosConfig';
+import { ClientError } from '../utils/errors/errors';
 
 /**
  *  Gets appropriate replies from service 2
@@ -8,6 +9,10 @@ import api from '../utils/axiosConfig';
  * @param {string} userMessage.message - message from client
  */
 export const getIntents = async (userMessage) => {
-  const response = await api.post('/intents', userMessage);
-  return await response.data;
+  try {
+    const response = await api.post('/intents', userMessage);
+    return await response.data;
+  } catch (err) {
+    throw new ClientError(errors.persistence.name, errors.persistence.message);
+  }
 };

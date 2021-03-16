@@ -12,9 +12,9 @@ describe('Test the ping path', () => {
   });
   test('It should respond wrong url', () => {
     return request(app)
-      .get('/plurg')
+      .get('/non-existent')
       .then((response) => {
-        expect(response.statusCode).toBe(500);
+        expect(response.statusCode).toBe(404);
       });
   });
 });

@@ -29,17 +29,17 @@ app.use('/api/messages', routes.messages);
 app.get('*', function (req, res, next) {
   const error = new Error(`${req.ip} tried to access ${req.originalUrl}`);
 
-  error.statusCode = 301;
+  error.statusCode = 404;
 
   next(error);
 });
 
 app.use((error, req, res, next) => {
-  console.error('hit the error middleware! error = ', error);
+  console.error('hit the error middleware!');
   if (!error.statusCode) error.statusCode = 500;
 
-  if (error.statusCode === 301) {
-    return res.status(301).send({ message: 'route not found' });
+  if (error.statusCode === 404) {
+    return res.status(404).send({ message: 'route not found' });
   }
 
   return res.status(error.statusCode).json({ error: error.toString() });

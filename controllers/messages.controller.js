@@ -25,7 +25,6 @@ export const handleMessage = async (req, res) => {
       data: reply.data,
     });
   } catch (err) {
-    // console.error('handleMessage error :>> ', err.response.data);
     res.status(500).send({
       status: 500,
       meta: "Internal error. See details in 'data' ",
