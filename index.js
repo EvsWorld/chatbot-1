@@ -35,7 +35,6 @@ app.get('*', function (req, res, next) {
 });
 
 app.use((error, req, res, next) => {
-  console.error('hit the error middleware!');
   if (!error.statusCode) error.statusCode = 500;
 
   if (error.statusCode === 404) {

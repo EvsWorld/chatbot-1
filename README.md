@@ -22,6 +22,93 @@
 - [ ] implement token middleware to protect crud routes for s2
 - [ ] implement tests
 - [ ] add swagger docs
+
+## Some example requests:
+### Sending message
+```
+curl --location --request POST 'http://localhost:5000/api/messages/chat-reply' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "botId": "5f74865056d7bb000fcd39ff",
+    "conversationId": "abc",
+    "message": "I'\''d like to know when my package will be here"
+}'
+
+## Expected return:
+{
+    "status": 200,
+    "meta": "Understood intent and found reply in s2 db",
+    "data": {
+        "finalReply": "Let me check on your order status.",
+        "intent": "Order status"
+    }
+}
+
+
+```
+
+
+```
+curl --location --request POST 'http://localhost:5000/api/messages/chat-reply' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "botId": "5f74865056d7bb000fcd39ff",
+    "conversationId": "abc",
+    "message": "xxx-xxx"
+}'
+
+## Expected return:
+{
+    "status": 422,
+    "meta": "Wasn't confident enough in users intent",
+    "data": {
+        "finalReply": "I'm sorry, I'm not sure how to proceed, transfering you to a customer service specialist now."
+    }
+}}
+
+```
+```
+curl --location --request POST 'http://localhost:5000/api/messages/chat-reply' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "botId": "5f74865056d7bb000fcd39ff",
+    "conversationId": "abc",
+    "message": "Hello"
+}'
+
+## Expected return:
+{
+    "status": 200,
+    "meta": "Understood intent and found reply in s2 db",
+    "data": {
+        "finalReply": "Hello to you too.",
+        "intent": "Greeting"
+    }
+}
+
+```
+```
+curl --location --request POST 'http://localhost:5000/api/messages/chat-reply' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "botId": "5f74865056d7bb000fcd39ff",
+    "conversationId": "abc",
+    "message": "I'\''d like to get a refund"
+}'
+
+## Expected return:
+{
+    "status": 404,
+    "meta": "Understood intent but could NOT find a reply in replies service",
+    "data": {
+        "finalReply": "I'm sorry, I'm not sure how to proceed, transfering you to a customer service specialist now.",
+        "intent": "Product interest or quote request"
+    }
+}
+
+
+```
+
 - - - -
 Hello! We’re excited that you want to join the team.
 If you have any questions regarding this task, please don’t hesitate to ask us.

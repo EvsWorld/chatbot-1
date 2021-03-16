@@ -19,12 +19,10 @@ export const schemaValidator = (schema) => {
    * @param {*} next
    */
   return (req, res, next) => {
-    console.info('Validating schema');
     const check = validate(req.body, schema);
     if (!check.valid) {
       // takes errors array's first element's message attribute
       const [{ message }] = check.errors;
-      console.debug(`Validation failed: ${message}`);
       res.status(400).send({ message });
       return;
     }
