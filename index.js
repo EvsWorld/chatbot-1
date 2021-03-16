@@ -34,6 +34,17 @@ app.get('*', function (req, res, next) {
   next(error);
 });
 
+app.use((error, req, res, next) => {
+  console.error('hit the error middleware! error = ', error);
+  if (!error.statusCode) error.statusCode = 500;
+
+  if (error.statusCode === 301) {
+    return res.status(301).send({ message: 'route not found' });
+  }
+
+  return res.status(error.statusCode).json({ error: error.toString() });
+});
+
 app.listen(config.port, (error) => {
   if (error) {
     console.log(`

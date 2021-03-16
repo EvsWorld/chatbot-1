@@ -13,7 +13,6 @@ export const respondFromReplies = async (intents, params) => {
     intents.intents.find(
       (intent) => intent.confidence > config.confidenceThreshold
     );
-  // console.log('topIntent :>> ', topIntent);
   if (topIntent) {
     // call messages service to get message to return
     // return apropriate message to client
@@ -24,7 +23,7 @@ export const respondFromReplies = async (intents, params) => {
         const replyData = reply.data.data;
         return {
           status: reply.data.status,
-          meta: `Understood intent (${topIntent.name}) and found reply in s2 db`,
+          meta: `Understood intent and found reply in s2 db`,
           data: {
             finalReply: replyData.replyMessage,
             intent: replyData.intent,
@@ -32,10 +31,17 @@ export const respondFromReplies = async (intents, params) => {
         };
       }
     } catch (err) {
+      if (err.errno === 'ECONNREFUSED') {
+        return {
+          status: 500,
+          meta: `Understood intent but could not connect to replies service`,
+          data: { intent: topIntent.name },
+        };
+      }
       if (err.response.data.status == 404)
         return {
           status: 404,
-          meta: `Understood intent but could NOT find a reply in s2 db`,
+          meta: `Understood intent but could NOT find a reply in replies service`,
           data: { finalReply: config.needHumanMessage, intent: topIntent.name },
         };
     }
@@ -43,8 +49,8 @@ export const respondFromReplies = async (intents, params) => {
     // if non of the messages have a high enough percentage then just return
     // stock message saying they'll connect them to a human
     return {
-      status: 200,
-      meta: "Wasn't confident enough in users intent ",
+      status: 422,
+      meta: "Wasn't confident enough in users intent",
       data: { finalReply: config.needHumanMessage },
     };
   }
@@ -55,6 +61,5 @@ export const getReplyFromExternal = async (params) => {
   const result = await axios.get(`${config.serverTwoUrl}/api/replies/`, {
     params,
   });
-  console.log('getReplyFromExternal :>> ', result);
   return result;
 };

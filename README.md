@@ -15,7 +15,7 @@
 - [x] implement function to seed s2 replies db, run from script
 - [x] standardize endpoint nouns
 - [ ] further separate services out from controllers
-- [ ] implement jsonschema and/or ajv
+- [x] implement jsonschema and/or ajv
 - [x] implement create route for s2
 - [x]  implement delete route for s2
 - [ ]  do jsdocs

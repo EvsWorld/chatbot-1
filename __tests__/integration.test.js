@@ -10,6 +10,13 @@ describe('Test the ping path', () => {
         expect(response.statusCode).toBe(200);
       });
   });
+  test('It should respond wrong url', () => {
+    return request(app)
+      .get('/plurg')
+      .then((response) => {
+        expect(response.statusCode).toBe(500);
+      });
+  });
 });
 
 describe('Test the chat-reply path', () => {
@@ -27,7 +34,7 @@ describe('Test the chat-reply path', () => {
       });
   });
 
-  test.only('It should respond that didnt understand intent', () => {
+  test('It should respond that it understood intent but couldnt find reply', () => {
     return request(app)
       .post('/api/messages/chat-reply')
       .send({
@@ -39,6 +46,28 @@ describe('Test the chat-reply path', () => {
         expect(response.statusCode).toBe(404);
         expect(response.body.data.finalReply).toEqual(
           "I'm sorry, I'm not sure how to proceed, transfering you to a customer service specialist now."
+        );
+        expect(response.body.meta).toEqual(
+          'Understood intent but could NOT find a reply in replies service'
+        );
+      });
+  });
+
+  test('It should respond that it didnt understand intent', () => {
+    return request(app)
+      .post('/api/messages/chat-reply')
+      .send({
+        botId: '5f74865056d7bb000fcd39ff',
+        conversationId: 'abc',
+        message: 'xxx-xxx',
+      })
+      .then((response) => {
+        expect(response.statusCode).toBe(422);
+        expect(response.body.data.finalReply).toEqual(
+          "I'm sorry, I'm not sure how to proceed, transfering you to a customer service specialist now."
+        );
+        expect(response.body.meta).toEqual(
+          "Wasn't confident enough in users intent"
         );
       });
   });

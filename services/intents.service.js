@@ -9,6 +9,5 @@ import api from '../utils/axiosConfig';
  */
 export const getIntents = async (userMessage) => {
   const response = await api.post('/intents', userMessage);
-  // console.log('getIntents response :>> ', response.data);
   return await response.data;
 };

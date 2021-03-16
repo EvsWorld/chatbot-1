@@ -19,7 +19,6 @@ export const handleMessage = async (req, res) => {
   try {
     const intents = await getIntents(userMessage);
     const reply = await respondFromReplies(intents, clientParameters);
-    // console.log('respondFromReplies :>> ', reply);
     res.status(reply.status).send({
       status: reply.status,
       meta: reply.meta,
